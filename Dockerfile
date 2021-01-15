@@ -56,6 +56,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
         sudo \
         xkb-data \
         zlib1g \
+	pandoc \
+	xvfb \
     && apt-get clean \
     && apt-get -y autoremove \
     && rm -rf /var/lib/apt/lists/*
@@ -180,5 +182,5 @@ WORKDIR /home/matlab
 
 # Uncomment and maybe change the following line to setup mex in your container
 #RUN /usr/local/MATLAB/bin/mex -v -setup C++
-
+ENV DISPLAY :99
 ENTRYPOINT ["/opt/startscript/startmatlab.sh"]
