@@ -1,6 +1,6 @@
 # Copyright 2019 - 2020 The MathWorks, Inc.
 
-FROM ubuntu:18.04 as prebuilder
+FROM ubuntu:20.04 as prebuilder
 
 LABEL  MAINTAINER=MathWorks
 
@@ -10,8 +10,6 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
         ca-certificates \
         libasound2 \
         libatk1.0-0 \
-        libavcodec-extra57 \
-        libavformat57 \
         libc6 \
         libcairo-gobject2 \
         libcairo2 \
