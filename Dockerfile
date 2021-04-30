@@ -56,6 +56,9 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
         zlib1g \
 	pandoc \
 	xvfb \
+	gpg \
+	gpg-agent \
+	xxd \
     && apt-get clean \
     && apt-get -y autoremove \
     && rm -rf /var/lib/apt/lists/*
