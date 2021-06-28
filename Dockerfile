@@ -59,6 +59,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 	gpg \
 	gpg-agent \
 	xxd \
+	gcc \
     && apt-get clean \
     && apt-get -y autoremove \
     && rm -rf /var/lib/apt/lists/*
